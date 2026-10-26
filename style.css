@@ -1,0 +1,70 @@
+/* Shared styles for all NovaTech pages */
+:root {
+  color-scheme: light;
+  --navy: #16324f;
+  --blue: #2364aa;
+  --teal: #3da5a5;
+  --pale: #f2f7fb;
+  --ink: #1e293b;
+  --muted: #526174;
+  --white: #ffffff;
+  --border: #d8e2ec;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--pale);
+}
+a { color: var(--blue); }
+a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible {
+  outline: 3px solid #f4b942;
+  outline-offset: 3px;
+}
+.container { width: min(1080px, calc(100% - 2rem)); margin-inline: auto; }
+.site-header { background: var(--navy); color: var(--white); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-block: 1rem; }
+.brand { color: var(--white); text-decoration: none; font-size: 1.5rem; font-weight: 800; letter-spacing: .03em; }
+.nav-list { display: flex; flex-wrap: wrap; gap: .35rem; list-style: none; padding: 0; margin: 0; }
+.nav-list a { display: block; color: var(--white); text-decoration: none; padding: .55rem .8rem; border-radius: .5rem; }
+.nav-list a:hover, .nav-list a[aria-current="page"] { background: #2b4c6d; }
+.hero { margin-top: 2rem; padding: clamp(2rem, 6vw, 5rem); border-radius: 1.25rem; color: var(--white); background: linear-gradient(120deg, #16324f, #2364aa 62%, #3da5a5); }
+.hero h1 { max-width: 720px; font-size: clamp(2.2rem, 6vw, 4rem); line-height: 1.08; margin: .35rem 0 1rem; }
+.hero p:not(.eyebrow) { max-width: 650px; font-size: 1.1rem; }
+.eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; font-weight: 700; color: var(--teal); }
+.hero .eyebrow { color: #c9ffff; }
+.button { display: inline-block; border: 0; border-radius: .6rem; background: #f4b942; color: #172b3d; font: inherit; font-weight: 700; padding: .75rem 1.1rem; text-decoration: none; cursor: pointer; }
+.button:hover { filter: brightness(.96); }
+.section, .page-content { padding-block: 2.5rem 4rem; }
+.section h2, .page-content h2 { color: var(--navy); }
+.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1.2rem; }
+.card { background: var(--white); padding: 1.4rem; border: 1px solid var(--border); border-radius: .9rem; box-shadow: 0 5px 18px rgb(22 50 79 / 5%); }
+.card h3 { margin-top: 0; color: var(--blue); }
+.page-content { max-width: 900px; }
+.page-content h1 { font-size: clamp(2rem, 5vw, 3rem); color: var(--navy); margin-top: 0; }
+.value-list li { margin-block: .6rem; }
+.table-wrap { overflow-x: auto; background: var(--white); border-radius: .75rem; border: 1px solid var(--border); margin-block: 1.5rem; }
+table { width: 100%; border-collapse: collapse; text-align: left; }
+caption { padding: 1rem; font-weight: 700; color: var(--navy); text-align: left; }
+th, td { padding: .9rem 1rem; border-top: 1px solid var(--border); }
+thead { background: #e5eff8; color: var(--navy); }
+tbody tr:nth-child(even) { background: #f8fbfd; }
+.note { color: var(--muted); font-size: .9rem; }
+.contact-form { max-width: 650px; padding: 1.5rem; background: var(--white); border: 1px solid var(--border); border-radius: .9rem; }
+.form-field { display: grid; gap: .4rem; margin-bottom: 1.1rem; }
+.form-field label { font-weight: 700; }
+input, select, textarea { width: 100%; border: 1px solid #b9c8d6; border-radius: .45rem; padding: .75rem; font: inherit; color: var(--ink); background: var(--white); }
+textarea { resize: vertical; }
+.checkbox-field { display: flex; align-items: flex-start; gap: .65rem; }
+.checkbox-field input { width: auto; margin-top: .45rem; }
+.checkbox-field label { font-weight: 400; }
+.site-footer { background: var(--navy); color: #eaf2f8; padding-block: 1rem; }
+.site-footer p { margin: 0; font-size: .9rem; }
+@media (max-width: 700px) {
+  .header-inner { align-items: flex-start; flex-direction: column; gap: .6rem; }
+  .nav-list a { padding: .45rem .6rem; }
+  .cards { grid-template-columns: 1fr; }
+  th, td { padding: .7rem; }
+}

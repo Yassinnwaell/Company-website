@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact NovaTech with a question or message.">
+  <title>Contact | NovaTech</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">NovaTech</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a aria-current="page" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container page-content">
+    <p class="eyebrow">We'd love to hear from you</p>
+    <h1>Contact us</h1>
+    <p>Complete the form below. Required fields and built-in validation help ensure that the information is entered correctly.</p>
+    <form class="contact-form" action="#" method="get">
+      <div class="form-field">
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" autocomplete="name" minlength="2" maxlength="80" required>
+      </div>
+      <div class="form-field">
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="form-field">
+        <label for="topic">Subject</label>
+        <select id="topic" name="topic" required>
+          <option value="">Choose a subject</option>
+          <option value="products">Product question</option>
+          <option value="support">Customer support</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" minlength="10" maxlength="1000" required></textarea>
+      </div>
+      <div class="form-field checkbox-field">
+        <input id="confirm" name="confirm" type="checkbox" required>
+        <label for="confirm">I confirm that the information above is correct.</label>
+      </div>
+      <button class="button" type="submit">Send message</button>
+      <p class="note">Demo form: this school-project form validates entries in the browser but does not send messages to a server.</p>
+    </form>
+  </main>
+  <footer class="site-footer"><div class="container"><p>&copy; 2026 NovaTech. All rights reserved.</p></div></footer>
+</body>
+</html>
